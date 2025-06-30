@@ -187,3 +187,25 @@
 ```
 
 ### 3일차
+ * 브라우저 측 css는 작성자와 중복 될시 무력화 된다. 리셋용 css를 만들어서 사용함
+```html
+  /* reset */
+		body {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.2; 
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-size:1em;
+			font-weight:bold;
+		}
+		h1, h2, h3, h4, h5, h6, div, p, dl, body, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+			margin:0;
+			padding:0;
+		}
+		li {
+			list-style:none;
+		}
+```
+
