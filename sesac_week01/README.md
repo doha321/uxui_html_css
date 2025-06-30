@@ -209,3 +209,33 @@
 		}
 ```
 
+#### Head 
+ * html lan="ko" -> 영어는 en head전에 DOCTYPE 다음에 선언해주면 된다
+ * meta charset="utf-8" 적어줘야함
+   
+   `<link rel="styleshee" href="./css/basic.css/>` -> 현재공간에있는 css를 찾고 이 파일로 들어가라
+
+ * title 여기에 적기
+ 
+ #### CSS
+ 
+ * 총 높이가 322px일 경우 패딩값+보더값을 빼야 height 값
+ * height를 줬을때 글자양이 많아서 박스에 넘치면 overflow-y 히든을 주면된다
+ * scroll은 스크롤이 생긴다
+ * auto는 넘치면 스크롤이 생기고 필요없으면 안생긴다
+```html
+	.box { overflow-y : auto; }
+```
+
+ * 아래에 쓴게 우선이 되서 위에 쓴거를 덮어쓴다
+ * hover은 마우스를 가져다 되면 색이 변경된다
+ * ease 속도의 느낌
+ * box-sizing은 넓이와 높이를 정하는 기준을 설정한다
+   기본값으로 컨텐츠 영역(content-box)으로 되어있는데 보더영역(boredr-box)으로 기준을 바꾸면 설정한 사이즈에
+   컨텐츠 영역 -> 패딩영역 -> 보더영역 모두가 포함
+```html
+	.basic h2+div {} -> h2 뒤에 붙어있는 div라는 의미
+	.button: hover {} -> 마우스 가져다 되면 색이 변경됨
+	.button: activ { transform : translate(5px,5px); box-shadow: non; } -> 가로세로 5px만큼 움직이는거
+```  
+
