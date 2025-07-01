@@ -1,5 +1,5 @@
 # 웹퍼블리싱 수업 week 01
-### 1일차
+### 1일차 - HTML, CSS 란 (h1~h6, ul, ol, li, dt, dl, dd)
 * DOM과 CSSOM이란?
   + DOM : 내용을 담당하고 있는 정보뭉치(모양과 색X) -> 디폴트 값으로 인해 자동으로 모양이 정해진다
   + CSSOM : 모양과 색에 대한 정보 뭉치
@@ -66,7 +66,7 @@
     </dl>
     ```
 
-### 2일차
+### 2일차 - CSS요소 ( 다양한 인라인태그들 )
 * 최신규격 문서세팅을 하기 하기 위해서는 -> !DOCTYPE html을 적어줘야 한다
 * 블록성질 상자는 한칸을 차지하는 기본단위의 상자를 만들기 위해서이다
 * block 성질 상자는 한 줄을 차지한다
@@ -186,7 +186,7 @@
 	</body>
 ```
 
-### 3일차
+### 3일차 CSS 선택자
  * 브라우저 측 css는 작성자와 중복 될시 무력화 된다. 리셋용 css를 만들어서 사용함
 ```html
   /* reset */
@@ -218,7 +218,18 @@
  * title 여기에 적기
  
  #### CSS
- 
+ * `:first child` 가상클래스 선택자는 부모요소의 자식요소중에서 제일 첫번째에 위치하는 요소를 선택한다
+```html
+   HTML	
+   <ol>
+	<li>첫번째입니다</li>
+	<li>두번째입니다</li>
+	<li>세번째입니다</li>
+   </ol>
+
+   CSS
+   li:first child{ color : blue; } : 첫번째 li만 블루가 들어간다
+```
  * 총 높이가 322px일 경우 패딩값+보더값을 빼야 height 값
  * height를 줬을때 글자양이 많아서 박스에 넘치면 overflow-y 히든을 주면된다
  * scroll은 스크롤이 생긴다
@@ -238,4 +249,30 @@
 	.button: hover {} -> 마우스 가져다 되면 색이 변경됨
 	.button: activ { transform : translate(5px,5px); box-shadow: non; } -> 가로세로 5px만큼 움직이는거
 ```  
-
+### 4일차 박스다루기
+* `box-sizing: border-box;` 이렇게 세팅하면 border값이 포함된 박스 높이가 자동으로 된다
+* padding 상하좌우 다른값을 주는 방법(시계방향 상->우->하->좌) => margin도 동일하다*
+ + padding과 margin의 다른점
+    + box1에 bottm에 margin을 주고 box2에 top에 margin을 주면 큰 값으로 병합된다 (좌우는 제외)  
+```html
+	{ padding : 10px; } 4면의 값이 모두 같을때
+	{ padding : 10px 20px; } 상/하 , 좌/우 : 상하가 같고 좌우가 같을때
+	{ padding : 10px 20px 15px; } 상, 좌/우, 하 : 상하가 다르고 좌우가 같을때
+	{ padding : 10px 20px 12px 15px; } 상, 우, 하, 좌
+	{ padding-top : 10px; } top, right, left, bottom 한 면씩 따로 지정가능
+```
+* margin left, right를 auto로 주면 가운데 정렬이 된다
+* margin: 0 auto; 로 주면 좌우 auto가 된다(노멀 플로우에서 가운데 정렬은 이렇게 적어야함)
+* normal flow에서는 위아래 auto가 되지않고 좌우만 가능하다 그래서 margin: auto; 는 아니다(flex 공간에서는 된다)
+* 박스 안에 여러개의 박스가 나열되어있을때 같은 margin-top을 주는방법
+```html
+   HTML
+	<div class="text">
+		<p>안녕하세요</p>
+		<p>반갑습니다</p>
+		<p>감사합니다</p>
+	</div>
+   CSS
+	.text > p + p { margin-top : 20px; } : p의 형을 둔 p동생에게 margin-top을 적용하는방법
+	그래서 p의 형을 둔 p동생들은 전부 margin-top이 적용된다
+```
