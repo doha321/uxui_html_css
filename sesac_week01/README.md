@@ -276,3 +276,5 @@
 	.text > p + p { margin-top : 20px; } : p의 형을 둔 p동생에게 margin-top을 적용하는방법
 	그래서 p의 형을 둔 p동생들은 전부 margin-top이 적용된다
 ```
+* inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)
+* text-align : left, center, right
