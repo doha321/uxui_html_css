@@ -2,7 +2,7 @@
 
 ### 4일차 박스다루기
 * `box-sizing: border-box;` 이렇게 세팅하면 border값이 포함된 박스 높이가 자동으로 된다
-* padding 상하좌우 다른값을 주는 방법(시계방향 상->우->하->좌) => margin도 동일하다*
+* padding 상하좌우 다른값을 주는 방법(시계방향 상->우->하->좌) => margin도 동일하다
  + padding과 margin의 다른점
     + box1에 bottm에 margin을 주고 box2에 top에 margin을 주면 큰 값으로 병합된다 (좌우는 제외)  
 ```html
