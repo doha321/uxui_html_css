@@ -63,4 +63,7 @@
         }
         .icon > .like:hover {
             background-position: -50px 0; -> 왼쪽으로 이동할때는 (-)를 붙여준다
+ BODY
+   <div class="icon">
+        <a href="" class="like">즐겨찾기</a>
 ```
