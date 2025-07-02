@@ -1,4 +1,4 @@
-## 웹퍼블리싱 week02
+# 웹퍼블리싱 week02
 
 ### 4일차 박스다루기
 * height 값이 지정이 안되어있으면 콘텐츠에 맞춰서 박스가 줄어들거나 커진다
@@ -32,3 +32,12 @@
 ```
 * inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)
 * text-align : left, center, right
+
+### 5일차 이미지 다루기
+* object-fit : cover -> 이미지가 짤리지 언정 비율을 유지해서 div사이즈에 맞춰서 들어간다, figma : fill과 같다
+* object-fit : contain -> 공간이 남을지 언정 짤리지 않게(꽉차게) div 사이즈에 맞춰 들어감, figma : fit과 같다
+* backgruond-image: url('이미지위치')
+* background-repeat: no-repeat -> 백그라운드 이미지가 반복되지않게 / repeat-x로 넣으면 x값에만 들어간다
+* background-position: right bottom; 이렇게해도되고 퍼센트,px 다 넣을수있다
+
+***이미지 hover***
