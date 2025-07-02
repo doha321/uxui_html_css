@@ -33,6 +33,8 @@
 * inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)
 * text-align : left, center, right
 
+----
+
 ### 5일차 이미지 다루기
 * object-fit : cover -> 이미지가 짤리지 언정 비율을 유지해서 div사이즈에 맞춰서 들어간다, figma : fill과 같다
 * object-fit : contain -> 공간이 남을지 언정 짤리지 않게(꽉차게) div 사이즈에 맞춰 들어감, figma : fit과 같다
@@ -41,3 +43,24 @@
 * background-position: right bottom; 이렇게해도되고 퍼센트,px 다 넣을수있다
 
 ***이미지 hover***
+* `<a href="" class="like">즐겨찾기</a>`<br>시각장애인을 위해 기계가 읽을 수 있게 글씨는 작성하되 비장애인에게는 보이지 않아야 하기에 font size를 0으로 한다
+
+<img src="https://github.com/user-attachments/assets/99818939-52da-4912-af7e-bdcab595b517" style="margin-left=100px;">
+
+* 이미지에 마우스를 가져다 댔을때 색상이 바뀌는건 이미지의 위치가 바뀌는것이다
+* 꼭 <b>background-repeat:no-repeat</b>을 걸어야 한다
+```html
+ CSS
+   .icon > .like {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            display: block;
+            font-size: 0;
+            background-image: url('./images/icon.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+        .icon > .like:hover {
+            background-position: -50px 0; -> 왼쪽으로 이동할때는 (-)를 붙여준다
+```
