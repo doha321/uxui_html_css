@@ -47,6 +47,7 @@
 
 <img src="https://github.com/user-attachments/assets/99818939-52da-4912-af7e-bdcab595b517" style="margin-left=100px;">
 
+* 이미지 사이즈 100 x 100, 하트 위치가 50 x 50
 * 이미지에 마우스를 가져다 댔을때 색상이 바뀌는건 이미지의 위치가 바뀌는것이다
 * 꼭 <b>background-repeat:no-repeat</b>을 걸어야 한다
 ```html
