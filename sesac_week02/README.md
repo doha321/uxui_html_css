@@ -1,6 +1,8 @@
 # 웹퍼블리싱 week02
 
 ### 4일차 박스다루기
+* <b>inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)</b>
+* text-align(텍스트 정렬) : left, center, right
 * height 값이 지정이 안되어있으면 콘텐츠에 맞춰서 박스가 줄어들거나 커진다
 * width도 정해지지 않으면 브라우저 크기에 따라 정해진다
 * `box-sizing: border-box;` 이렇게 세팅하면 border값이 포함된 박스 높이가 자동으로 된다
@@ -30,8 +32,6 @@
 	.text > p + p { margin-top : 20px; } : p의 형을 둔 p동생에게 margin-top을 적용하는방법
 	그래서 p의 형을 둔 p동생들은 전부 margin-top이 적용된다
 ```
-* <b>inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)</b>
-* text-align : left, center, right
 
 ----
 
