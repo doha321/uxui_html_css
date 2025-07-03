@@ -30,17 +30,28 @@
 	.text > p + p { margin-top : 20px; } : p의 형을 둔 p동생에게 margin-top을 적용하는방법
 	그래서 p의 형을 둔 p동생들은 전부 margin-top이 적용된다
 ```
-* inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)
+* <b>inline 태그는 위 아래로 padding, margin 을 줄수없다(좌우는 가능)</b>
 * text-align : left, center, right
 
 ----
 
 ### 5일차 이미지 다루기
+* 자식요소에 margin을 주는것보다 부모요소에 gap을 주는게 간격조정에 더 좋다
+* width, height 100%을 줘야지 object-fit 이 가능하다
+* 정보(데이터베이스에서 가지고있는것)는 이미지태그로 넣기/ 표현,데코레이션 (슬래시, 동그라미 등) : 배경이미지로 넣기
+   + 슬래시나 동그라미를 글로 넣거나 이미지로 넣었을때 시각장애인 기계에서 저걸 다 읽어버려서 방해가됨(배경이면 읽지 않으니깐)
 * object-fit : cover -> 이미지가 짤리지 언정 비율을 유지해서 div사이즈에 맞춰서 들어간다, figma : fill과 같다
 * object-fit : contain -> 공간이 남을지 언정 짤리지 않게(꽉차게) div 사이즈에 맞춰 들어감, figma : fit과 같다
 * backgruond-image: url('이미지위치')
 * background-repeat: no-repeat -> 백그라운드 이미지가 반복되지않게 / repeat-x로 넣으면 x값에만 들어간다
 * background-position: right bottom; 이렇게해도되고 퍼센트,px 다 넣을수있다
+* display : flex - 요소를 flexbox 컨테이너로 만든다, 그래야지 가로배치&세로배치 다양하게 된다
+* justify-content : 같은 방향으로 정렬한다
+  + 세로방향일 때는 left, right를 쓸수 없기때문에 flex-start, flex-end 사용한다, space-between(좌우간격 맞춰서 정렬)
+* align-items : 플렉스박스의 교차축을 따라 정렬한다(다른방향 정렬)
+   + strech(늘어남), flex-start(플렉스 레이아웃에서만 사용되며 플렉스 아이템을 플렉스 컨테이너의 주축 시작 또는 교차 축 시작에 맞춰 정렬한다)
+* flex-direction : 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정한다
+  + row(가로방향), column(세로방향)
 
 ***이미지 hover***
 * `<a href="" class="like">즐겨찾기</a>`<br>시각장애인을 위해 기계가 읽을 수 있게 글씨는 작성하되 비장애인에게는 보이지 않아야 하기에 font size를 0으로 한다
@@ -68,10 +79,3 @@
    <div class="icon">
         <a href="" class="like">즐겨찾기</a>
 ```
-* display : flex - 요소를 flexbox 컨테이너로 만든다, 그래야지 가로배치&세로배치 다양하게 된다
-* justify-content : 같은 방향으로 정렬한다
-  + 세로방향일 때는 left, right를 쓸수 없기때문에 flex-start, flex-end 사용한다, space-between(좌우간격 맞춰서 정렬)
-* align-items : 플렉스박스의 교차축을 따라 정렬한다(다른방향 정렬)
-   + strech(늘어남), flex-start(플렉스 레이아웃에서만 사용되며 플렉스 아이템을 플렉스 컨테이너의 주축 시작 또는 교차 축 시작에 맞춰 정렬합니다.)
-* flex-direction : 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정한다
- + row(가로방향), column(세로방향)
