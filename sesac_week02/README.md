@@ -56,7 +56,7 @@
             border: 1px solid black;
             width: 50px;
             height: 50px;
-            display: block;
+            display: block;*
             font-size: 0;
             background-image: url('./images/icon.png');
             background-repeat: no-repeat;
@@ -68,3 +68,10 @@
    <div class="icon">
         <a href="" class="like">즐겨찾기</a>
 ```
+* display : flex - 요소를 flexbox 컨테이너로 만든다, 그래야지 가로배치&세로배치 다양하게 된다
+* justify-content : 같은 방향으로 정렬한다
+  + 세로방향일 때는 left, right를 쓸수 없기때문에 flex-start, flex-end 사용한다, space-between(좌우간격 맞춰서 정렬)
+* align-items : 플렉스박스의 교차축을 따라 정렬한다(다른방향 정렬)
+   + strech(늘어남), flex-start(플렉스 레이아웃에서만 사용되며 플렉스 아이템을 플렉스 컨테이너의 주축 시작 또는 교차 축 시작에 맞춰 정렬합니다.)
+* flex-direction : 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정한다
+ + row(가로방향), column(세로방향)
